@@ -12,6 +12,7 @@
 
 import datetime
 import importlib.metadata
+import os
 from pathlib import Path
 
 import jinja2.filters
@@ -356,6 +357,8 @@ Shall you encounter any issues, please feel free to report them on the
 )
 
 # -- Options for MyST-NB and Markdown-based content --------------------------
+
+os.environ["PYDEVD_DISABLE_FILE_VALIDATION"] = "1"
 
 nb_execution_mode = 'auto'
 nb_execution_timeout = 60
