@@ -23,8 +23,12 @@ requires = [
 [project]
 name = "PyWavelets"
 version = "1.8.0.dev0"
-license = "MIT"
-license-files = ["LICENSE"]
+license = "MIT and BSD-3-Clause"
+license-files = [
+    "LICENSE",
+    "licenses_bundled/LICENSE_*",
+    "licenses_bundled/README.txt",
+]
 maintainers = [
     {name = "The PyWavelets Developers", email = "pywavelets@googlegroups.com"}
 ]
