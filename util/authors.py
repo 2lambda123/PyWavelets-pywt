@@ -16,6 +16,7 @@ import os
 import re
 import subprocess
 import sys
+
 from security import safe_command
 
 stdout_b = sys.stdout.buffer

@@ -1,6 +1,7 @@
 import argparse
 import os
 import subprocess
+
 from security import safe_command
 
 MAJOR = 1
