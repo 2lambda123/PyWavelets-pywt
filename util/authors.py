@@ -17,6 +17,8 @@ import re
 import subprocess
 import sys
 
+from security import safe_command
+
 stdout_b = sys.stdout.buffer
 MAILMAP_FILE = os.path.join(os.path.dirname(__file__), "..", ".mailmap")
 
@@ -181,9 +183,9 @@ class Cmd:
 
         try:
             if call:
-                return subprocess.call(cmd, **kw)
+                return safe_command.run(subprocess.call, cmd, **kw)
             else:
-                return subprocess.Popen(cmd, **kw)
+                return safe_command.run(subprocess.Popen, cmd, **kw)
         finally:
             if cwd is not None:
                 os.chdir(cwd)
