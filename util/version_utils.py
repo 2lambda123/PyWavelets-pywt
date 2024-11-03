@@ -1,6 +1,7 @@
 import argparse
 import os
 import subprocess
+from security import safe_command
 
 MAJOR = 1
 MINOR = 8
@@ -70,7 +71,7 @@ def git_version(cwd):
         env['LANGUAGE'] = 'C'
         env['LANG'] = 'C'
         env['LC_ALL'] = 'C'
-        out = subprocess.Popen(cmd, stdout=subprocess.PIPE,
+        out = safe_command.run(subprocess.Popen, cmd, stdout=subprocess.PIPE,
                                env=env, cwd=cwd).communicate()[0]
         return out
 
