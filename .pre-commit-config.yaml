@@ -21,7 +21,7 @@ repos:
         args: [--prose-wrap=preserve]
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: cafecb2f683a620516412e109877570ca7648cbd  # frozen: v0.7.4
+    rev: cafecb2f683a620516412e109877570ca7648cbd # frozen: v0.7.4
     hooks:
       - id: ruff
         args: [--fix, --exit-non-zero-on-fix]
